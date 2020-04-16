@@ -2,71 +2,32 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "string_field": {
+    "excel_name": {
       "type": ["null", "string"]
     },
-    "boolean_field": {
-      "type": ["null", "boolean"]
+    "asset_ids_string": {
+      "type": ["null", "string"]
     },
-    "integer_field": {
+    "conversion_type_id": {
       "type": ["null", "integer"]
     },
-    "datetime_field": {
-      "type": ["null", "string"],
-      "format": "date-time"
+    "data_value_type": {
+      "type": ["null", "integer"]
     },
-    "flexible_nested_object": {
-      "type": ["null", "object"],
-      "additionalProperties": true
+    "enabled_capabilities_string": {
+      "type": ["null", "string"]
     },
-    "nested_object": {
-      "type": ["null", "object"],
-      "additionalProperties": false,
-      "properties": {
-        "id": {
-          "type": ["null", "integer"]
-        },
-        "name": {
-          "type": ["null", "string"]
-        }
-      }
+    "is_monetary": {
+      "type": ["null", "boolean"]
     },
-    "nested_array": {
-      "anyOf": [
-        {
-          "type": "array",
-          "items": {
-            "type": ["null", "object"],
-            "additionalProperties": false,
-            "properties": {
-              "id": {
-                "type": ["null", "integer"]
-              },
-              "name": {
-                "type": ["null", "string"]
-              }
-            }
-          }
-        },
-        {
-          "type": "null"
-        }
-      ]
+    "is_putable": {
+      "type": ["null", "boolean"]
     },
-    "single_field_array": {
-      "anyOf": [
-        {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        {
-          "type": "null"
-        }
-      ]
+    "label": {
+      "type": ["null", "string"]
     },
-    
-    "ADD_FIELDS_HERE": ""
+    "scenario_ids_string": {
+      "type": ["null", "string"]
+    }
   }
 }
