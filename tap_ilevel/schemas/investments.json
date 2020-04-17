@@ -1,72 +1,62 @@
+
 {
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "string_field": {
-      "type": ["null", "string"]
-    },
-    "boolean_field": {
-      "type": ["null", "boolean"]
-    },
-    "integer_field": {
+    "from_id": {
       "type": ["null", "integer"]
     },
-    "datetime_field": {
+    "id": {
+      "type": ["null", "integer"]
+    },
+    "status_id": {
+      "type": ["null", "integer"]
+    },
+    "to_id": {
+      "type": ["null", "integer"]
+    },
+    "type_id": {
+      "type": ["null", "ObjectTypes?"]
+    },
+    "acquisition_date": {
       "type": ["null", "string"],
       "format": "date-time"
     },
-    "flexible_nested_object": {
-      "type": ["null", "object"],
-      "additionalProperties": true
-    },
-    "nested_object": {
-      "type": ["null", "object"],
-      "additionalProperties": false,
-      "properties": {
-        "id": {
-          "type": ["null", "integer"]
-        },
-        "name": {
-          "type": ["null", "string"]
-        }
-      }
-    },
-    "nested_array": {
+    "commitment": {
       "anyOf": [
         {
-          "type": "array",
-          "items": {
-            "type": ["null", "object"],
-            "additionalProperties": false,
-            "properties": {
-              "id": {
-                "type": ["null", "integer"]
-              },
-              "name": {
-                "type": ["null", "string"]
-              }
-            }
-          }
+            "type": "null"
         },
         {
-          "type": "null"
+            "type": "number",
+            "multipleOf": 1e-8
         }
       ]
     },
-    "single_field_array": {
+    "currency": {
+      "type": ["null", "string"]
+    },
+    "exit_date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "last_modified_date": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "ownership_percentage": {
       "anyOf": [
         {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
+            "type": "null"
         },
         {
-          "type": "null"
+            "type": "number",
+            "multipleOf": 1e-8
         }
       ]
     },
-    
-    "ADD_FIELDS_HERE": ""
-  }
+    "security_id": {
+        "type": ["null", "integer"]
+    }
+	}
 }

@@ -2,20 +2,48 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "id": {
-      "type": ["null", "string"]
-    },
-    "name": {
-      "type": ["null", "string"]
-    },
     "excel_name": {
       "type": ["null", "string"]
     },
-    "status_id": {
-      "type": ["null", "string"]
+    "business_unit_id": {
+      "anyOf": [
+        {
+            "type": "null"
+        },
+        {
+            "type": "number",
+            "multipleOf": 1e-8
+        }
+      ]
     },
     "calendar_type": {
-      "type": ["null", "string"]
+      "type": ["null", "object?"],
+      "additionalProperties": false,
+      "properties": {
+        
+      }
+    },
+    "capital_called_to_date": {
+      "anyOf": [
+        {
+            "type": "null"
+        },
+        {
+            "type": "number",
+            "multipleOf": 1e-8
+        }
+      ]
+    },
+    "commitment": {
+      "anyOf": [
+        {
+            "type": "null"
+        },
+        {
+            "type": "number",
+            "multipleOf": 1e-8
+        }
+      ]
     },
     "currency_code": {
       "type": ["null", "string"]
@@ -23,22 +51,29 @@
     "description": {
       "type": ["null", "string"]
     },
-    "vintage": {
-      "type": ["null", "string"]
-    },
-    "total_committed_capital": {
-      "type": ["null", "number"],
-      "multipleOf": 1e-8
-    },
-    "initial_closed_date": {
-      "type": ["null", "string"],
-      "format": "date-time"
-    },
-    "final_closed_date": {
+    "final_close_date": {
       "type": ["null", "string"],
       "format": "date-time"
     },
     "fiscal_year_end": {
+      "type": ["null", "fisicalYearEnd?"]
+    },
+    "fund_size": {
+      "type": ["null", "integer"]
+    },
+    "gp_id": {
+      "type": ["null", "integer"]
+    },
+    "geography_id": {
+      "type": ["null", "integer"]
+    },
+    "include_in_workflow": {
+      "type": ["null", "boolean"]
+    },
+    "industry_id": {
+      "type": ["null", "integer"]
+    },
+    "initial_close_date": {
       "type": ["null", "string"],
       "format": "date-time"
     },
@@ -49,6 +84,27 @@
     "last_modified_date": {
       "type": ["null", "string"],
       "format": "date-time"
+    },
+    "owner_type_id": {
+      "type": ["null", "integer"]
+    },
+    "period_mapping": {
+      "type": ["null", "array?"]
+    },
+    "status_id":{
+      "type": ["null", "integer"]
+    },
+    "strategy_id": {
+      "type": ["null", "integer"]
+    },
+    "sub_strategy_id": {
+      "type": ["null", "integer"]
+    },
+    "total_committed_capital": {
+      "type": ["null", "integer"]
+    },
+    "vintage_sort": {
+      "type": ["null", "integer"]
     }
   }
 }

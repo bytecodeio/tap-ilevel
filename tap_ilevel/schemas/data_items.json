@@ -1,33 +1,33 @@
 {
   "type": "object",
   "additionalProperties": false,
-  "properties": {
+  "properties": {    
     "excel_name": {
-      "type": ["null", "string"]
+      "type": ["null","string"]
     },
-    "asset_ids_string": {
-      "type": ["null", "string"]
+    "asset_id_string": {
+      "type": ["null","string"]
     },
     "conversion_type_id": {
-      "type": ["null", "integer"]
+      "type": ["null","int"]
     },
     "data_value_type": {
-      "type": ["null", "integer"]
+      "type": ["null","int"]
     },
     "enabled_capabilities_string": {
-      "type": ["null", "string"]
+      "type": ["null","string"]
     },
     "is_monetary": {
-      "type": ["null", "boolean"]
+      "type": ["null","boolean"]
     },
     "is_putable": {
-      "type": ["null", "boolean"]
+      "type": ["null","boolean"]
     },
     "label": {
-      "type": ["null", "string"]
+      "type": ["null","string"]
     },
     "scenario_ids_string": {
-      "type": ["null", "string"]
+      "type": ["null","string"]
     }
   }
 }
