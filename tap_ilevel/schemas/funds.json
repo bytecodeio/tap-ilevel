@@ -17,11 +17,7 @@
       ]
     },
     "calendar_type": {
-      "type": ["null", "object?"],
-      "additionalProperties": false,
-      "properties": {
-        
-      }
+      "type": ["null", "string"]
     },
     "capital_called_to_date": {
       "anyOf": [
@@ -56,7 +52,19 @@
       "format": "date-time"
     },
     "fiscal_year_end": {
-      "type": ["null", "fisicalYearEnd?"]
+      "type": ["null", "object"],
+      "additionalProperties": false,
+      "properties": {
+        "month": {
+          "type": ["null", "integer"]
+        },
+        "month_to_calendar_quarter": {
+          "type": ["null", "string"]
+        },
+        "year": {
+          "type": ["null", "string"]
+        }
+      }
     },
     "fund_size": {
       "type": ["null", "integer"]
@@ -89,7 +97,50 @@
       "type": ["null", "integer"]
     },
     "period_mapping": {
-      "type": ["null", "array?"]
+      "anyOf": [
+        {
+        	"type": "array",
+        	"items":{
+            "type": ["null", "object"],
+            "additionalProperties": false,
+            "properties": {
+              "calendar_period": {
+                "type": ["null", "integer"]
+              },
+              "calendar_quarter": {
+                "type": ["null", "integer"]
+              },
+              "calendar_quarter_offset": {
+                "type": ["null", "integer"]
+              },
+              "calendar_type": {
+                "type": ["null", "string"]
+              },
+              "calendar_type_fiscal_period": {
+                "type": ["null", "integer"]
+              },
+              "fiscal_quarter": {
+                "type": ["null", "integer"]
+              },
+              "fiscal_year_offset": {
+                "type": ["null", "integer"]
+              },
+              "is_calendar_year_end": {
+                "type": ["null", "boolean"]
+              },
+              "is_fiscal_year_end": {
+                "type": ["null", "boolean"]
+              },
+              "is_period_end_on_15th": {
+                "type": ["null", "boolean"]
+              },
+              "object_id": {
+                "type": ["null", "integer"]
+              }
+            }
+        	}
+        }
+      ]
     },
     "status_id":{
       "type": ["null", "integer"]

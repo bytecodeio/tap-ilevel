@@ -9,10 +9,10 @@
       "type": ["null","string"]
     },
     "conversion_type_id": {
-      "type": ["null","int"]
+      "type": ["null","integer"]
     },
     "data_value_type": {
-      "type": ["null","int"]
+      "type": ["null","integer"]
     },
     "enabled_capabilities_string": {
       "type": ["null","string"]
